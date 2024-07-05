@@ -14,6 +14,7 @@ app.use(express.json());
 app.use(morgan('dev'))
 
 // routes
+app.use('/api/items', require('./routes/itemRoute'));
 app.get('', (req, res) => {
     return res.json({
         status: true,
